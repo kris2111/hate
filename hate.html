@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>横竖屏显示不同文字</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 2rem;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+
+    /* 竖屏时显示的内容 */
+    .portrait {
+      display: block;
+    }
+
+    /* 横屏时显示的内容 */
+    .landscape {
+      display: none;
+    }
+
+    /* 横屏样式 */
+    @media (orientation: landscape) {
+      .portrait {
+        display: none;
+      }
+      .landscape {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="portrait">我恨你</div>
+  <div class="landscape">我爱你</div>
+</body>
+</html>
